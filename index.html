@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VirtualBox + Ubuntu</title>
+    <style>
+
+        * {
+            text-align: center;
+            /* width: 25%; */
+            /* height: 25%; */
+            font-size: 125% !important;
+            background-color: rgb(0, 0, 0);
+            color: rgba(255, 255, 255, 0.93);
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        img {
+            width: 75%;
+            height: auto;
+            margin: 2vh auto;
+            border: 1vh dashed purple;
+            padding: 1.5vh;
+        }
+        p {
+            width: 90%;
+            padding: 1vh auto;
+        }
+        .line {
+            width: 100%;
+            height: 1vh;
+            background-color: whitesmoke;
+            margin: 5vh 0;
+        } 
+
+        .tiles {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .tiles img {
+            width: 40%;
+            margin: 1vh auto;
+        }
+
+        a {
+            display: inline-block;
+            width: 80%;
+            margin: 1vh auto;
+        }
+
+        h1, h2, h3, h4 {
+            display: inline-block;
+            width: 100%;
+        }
+
+        h1 {
+            width: 100%;
+            /* font-size: 15vh; */
+            padding-top: 5vh;
+        }
+
+        h2 {
+            width: 95%;
+            font-size: 5vw;
+        }
+
+        h3, i {
+            font-size: 4vw;
+        }
+
+        .thanks {
+            width: 100vw;
+            font-size: 125%;
+            /* height: 50vh; */
+            opacity: 0.5;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        @media (orientation: portrait) {
+            * {
+                font-size: 100% !important;
+            }
+
+            header {
+                height: 20vh;
+            }
+            
+            .thanks {
+                font-size: 1vh !important;
+                margin-top: -2vh;
+            }
+
+            .line {
+                width: 100vw;
+            }
+
+            h1 {
+                font-size: 4vh !important;
+            }
+
+   
+
+        }
+
+        @media (orientation: landscape) {
+
+   
+  header {
+            height: 100vh;
+        }
+
+        .thanks {
+            margin-top: 30vh;
+            font-size: 100% !important;
+        }
+
+        h1 {
+            font-size: 200% !important;
+        }
+        
+      
+        }
+
+    </style>
+</head>
+
+<header>
+
+    <h1>Virtual-Box + Ubuntu LTS</h1>
+    
+    <div class="line"></div>
+
+    <div class="thanks">
+        <p>
+            Based on YT tuto:</p>
+            <a href="https://www.youtube.com/watch?v=j1FAZ0bUEvs&ab_channel=Pingvinus">
+                https://www.youtube.com/watch?v=j1FAZ0bUEvs&ab_channel=Pingvinus
+            </a>
+        </div>
+
+    </header>
+
+        <div class="line"></div>
+
+
+    <h2>Updating environment:</h2>
+
+    <p>
+        To start with (Oracle) VirtualBox you need to download it and install it.
+    </p>
+    <img src="./screen_shots/virtualbox.png" alt="VB">
+    
+    <a href="https://www.virtualbox.org/wiki/End-user_documentation">https://www.virtualbox.org/wiki/End-user_documentation</a>
+    
+    <img src="./screen_shots/02_err_noc++.png" alt="err">
+
+    <p>
+        If Visual Studiio C++ RUNTIME is not yet installed on you machine - you should do it.
+    </p>
+    
+    <!-- <img src="./screen_shots/02_vsc++.png" alt="3"> -->
+    <p>
+    You can find some useful tips here:
+</p>
+    <a href="https://www.scmgalaxy.com/tutorials/virtualbox-issues-oracle-vm-virtualbox-7-0-0-needs-the-microsoft-visual-c-2019-redistributable-package/">https://www.scmgalaxy.com/tutorials/virtualbox-issues-oracle-vm-virtualbox-7-0-0-needs-the-microsoft-visual-c-2019-redistributable-package/</a>
+    <img src="./screen_shots/success.png" alt="4">
+    
+    <p>
+        Visual C++ download:
+    </p>
+    <a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170">https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170</a>
+    
+    <img src="./screen_shots/04_vsc++dl.png" alt="11">
+    <p>
+       My choise is 64 :
+    </p>
+    <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">https://aka.ms/vs/17/release/vc_redist.x64.exe</a>
+    
+    <img src="./screen_shots/success_.png" alt="5">
+
+<div class="line"></div>
+
+<h2>Now VB installation:</h2>
+<div class="tiles">
+    <img src="./screen_shots/05_setup1.png" alt="6">
+    <img src="./screen_shots/06_net_work_warn.png" alt="7">
+    <img src="./screen_shots/07_python-core_missing.png" alt="8">
+    <img src="./screen_shots/08_suggestion_to_start.png" alt="9">
+</div>
+<p>
+    Visit Canonical Ubuntu main page:
+    
+</p>
+
+<a href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a>
+
+<img src="./screen_shots/09_download_ubuntu.png" alt="10">
+<p>
+    Download Ubuntu image:
+</p>
+
+<a href="https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64">https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64</a>
+
+
+<img src="./screen_shots/`13.png" alt="14">
+
+<p>As it pretty size downloading may take a few minutes...</p>
+
+<img src="./screen_shots/`14.png" alt="15">
+
+<div class="line"></div>
+
+<h2>Presetup Virtual-Box:</h2>
+
+<p>Make sure you started VB first !)</p>
+
+<p>
+    To presetup HOST site evironment go to related menu:
+</p>
+<img src="./screen_shots/16.png" alt="18">
+
+<p>Prepare Virtual-Box for hosting your image:</p>
+<img src="./screen_shots/17.png" alt="19">
+
+<p>Choosing presicely is optional:</p>
+
+<img src="./screen_shots/18.png" alt="20">
+
+    <!-- <img src="./screen_shots/10_vb_start_1.png" alt="12"> -->
+    <!-- <img src="./screen_shots/11_ubuntu_for_vm.png" alt="13"> -->
+    
+    <p>
+        Set disk space for future Ubuntu (for example 10Gb):
+    </p>
+    
+    <img src="./screen_shots/19.png" alt="21">
+    
+    <p>
+        RAM capacity available setup (e.g. 4096 Mb = 4Gb):
+    </p>
+    
+    <img src="./screen_shots/20.png" alt="22">
+
+<p>
+    CPU - is also available to set (50% of entire cores - 2)  for productivity:
+</p>
+
+    <img src="./screen_shots/24.png" alt="26">
+
+
+    <p>
+        We can set maximum 128 Mb Video-card integrated RAM for our VM:
+    </p>
+
+    <img src="./screen_shots/25.png" alt="27">
+
+<p>
+    ...somsing like this...
+</p>
+
+    <img src="./screen_shots/21.png" alt="23">
+
+    <p>
+        Congrats: Your presetub is successfully finished!
+    </p>
+
+    
+<img src="./screen_shots/22.png" alt="24">
+
+<div class="line"></div>
+
+<h2>Mounting OS image to Virtual Box:</h2>
+
+<p>
+    Use settings menu to add ubuntu image to your VM:
+</p>
+
+    <img src="./screen_shots/23.png" alt="25">
+
+    <p>
+        Storage tab -- exactly what you need:
+    </p>
+
+    <img src="./screen_shots/26.png" alt="28">
+
+    <p>
+        Popping up dialogue menu help you to pick right file in no time:
+    </p>
+
+    <img src="./screen_shots/27.png" alt="29">
+    
+    <p>
+        Choose previously downloaded "Canonical" Ubuntu.ISO:
+    </p>
+    <img src="./screen_shots/15.png" alt="17">
+
+    <p>
+        Now your Virtual-box manager is prepared to start virtual ubuntu iso-image:
+    </p>
+
+    <img src="./screen_shots/28.png" alt="30">
+
+    <div class="line"></div>
+
+    <h2>
+        Installing real Ubuntu LTS to your Virtual environment:
+    </h2>
+
+    <p>
+        Chose language, user-name and so on:
+    </p>
+
+
+    <img src="./screen_shots/29.png" alt="31">
+
+
+    <p>
+        Let installer know what to do with Virtual HDD:
+    </p>
+
+    <img src="./screen_shots/30.png" alt="32">
+
+
+    <p>
+        ...wait for a several minutes (depend on your real machine capabilities) ...
+    </p>
+
+    <img src="./screen_shots/2022-12-25 15-55-44-23.png" alt="33">
+    <!-- <img src="./screen_shots/31.png" alt="34">
+    <img src="./screen_shots/32.png" alt="35"> -->
+
+<div class="line"></div>
+
+<h2>Your Ubuntu is successfully installed now!</h2>
+
+<p>
+    Most likely you pressed enter to skip booting from virtual CD-ROM again...
+</p>
+<p>Hope you didn't forgot your password yet:</p>
+
+    <img src="./screen_shots/2022-12-25 16-33-06-05.png" alt="36">
+
+<p>
+    Azmazing!!! How many software apps are there on Ubuntu just out of the box!)
+</p>
+
+    <img src="./screen_shots/2022-12-25 16-37-50-79.png" alt="37">
+
+<p>To make closer the moment of seeing effectivity of our own efforts 
+
+    install utilities that help to engage our HOST and GUEST systems
+
+    type in '' in terminal and press enter (and also enter password and 'y'...)
+</p>
+
+
+    <img src="./screen_shots/2022-12-25 16-40-31-36.png" alt="38">
+ <div class="tiles">   <img src="./screen_shots/33.png" alt="39">
+
+
+
+   
+
+    <img src="./screen_shots/2022-12-25 17-17-06-43.png" alt="41">
+</div>
+
+<p>When its been done ... then power-off our virtual OS to make furthure setups.</p>
+
+<p>
+    Reboot virtual Ubuntu to proceed.
+     </p>
+     
+
+
+
+    
+
+    <img src="./screen_shots/2022-12-25 17-20-09-88.png" alt="42">
+
+
+
+    <div class="line"></div>
+
+<h2>Setting up "offline" settings:</h2>
+
+
+
+<p>
+    Now we should power off our virtual Machine to ajust it additionally.
+    In settings tab we can choose 'General->advanced' and enable clipboard sharing option to 'Bidirectional'
+    what means that HOST and GUEST OS could interect via shared clipboard.
+</p>
+<img src="./screen_shots/34.png" alt="43">
+    <!-- <img src="./screen_shots/35.png" alt="44"> -->
+    <!-- <img src="./screen_shots/36.png" alt="45"> -->
+    
+    <p>
+        To setup shared folders choose 'Shared folders' tab in settings window and add folder and mount-point.
+        For test purposes in dialog menu we created 'C:\VM_share' folder an chose it to be shared.
+        Select 'Auto-mount' option. You can also assign an alias to you shared folder inside input field called 'Mount-point:'[]
+        This path will be able on HOST system (in our case inside Ubuntu OS).
+    </p>
+    <img src="./screen_shots/37.png" alt="46">
+
+    <p>
+        Also we can enable Drag'n'drop capability on place to freely drag'drop files between systems as well.
+     </p>
+
+     <p>
+        Additionaly you can adjust Grafical settings in tab 'Display' and enable '3D Acceleration' if it needed (with powered off GUEST OS).
+     </p>
+
+     <div class="line"></div>
+
+     <h2>Trying to use systems whose are a little interconnected already:</h2>
+
+     <p>
+        Now let's run presettuped VM (by pressing START button in Virtual-box GUI).
+     </p>
+    
+    <img src="./screen_shots/38.png" alt="47">
+
+<p>All is fine ...</p>
+
+    <img src="./screen_shots/2022-12-25 17-56-11-35.png" alt="48">
+    
+<p>...but...</p>
+
+
+<img src="./screen_shots/2022-12-25 17-57-39-76.png" alt="49">
+
+<p>
+    If your mounted CD-ROM has not been autorun you can run its "autorun.sh"...</p>
+
+
+
+<img src="./screen_shots/2022-12-25 16-49-04-12.png" alt="40">
+
+    <p>
+        Run terminal.
+        It is located in root (!not home), via path: root/media/USER-NAME/CDROM-NAME/autorun.sh
+        So if you are entering ./autorun.sh previously chosen right directory
+        it will be immidiately executed and your CD drive (inside your virtual Ubuntu) will be started.
+    </p>
+
+    <img src="./screen_shots/2022-12-25 18-08-00-91.png" alt="51">
+
+    <p>
+        At this moment we Ubuntu is not allowing to use previously chosen (shared) directory.
+        To finish this setup add ubuntu-user permission to use this folder by typing in terminal:
+        sudo adduser USERNAME vboxsf 
+        wich stand for virtual-box user for S-hared F-older
+
+        On this stage you can already use share clip-board (pasting via CTRL+SHIFT+V for example)))
+
+        Reboot (restart) Virtual Ubuntu to use new-added 'previleguies' :)
+     </p>
+
+
+    <!-- <img src="./screen_shots/2022-12-25 18-05-01-97.png" alt="50"> -->
+
+
+    <img src="./screen_shots/2022-12-25 18-14-01-36.png" alt="52">
+
+    <div class="line"></div>
+    <!-- <img src="./screen_shots/2022-12-25 18-17-49-62.png" alt="53"> -->
+    <!-- <img src="./screen_shots/2022-12-25 18-20-56-68.png" alt="54"> -->
+    <!-- <img src="./screen_shots/2022-12-25 18-28-48-08.png" alt="55"> -->
+
+    <h2>Testing out our results:</h2>
+
+<p>Shared directories passing tests!)</p>
+
+    <div class="tiles">
+    <img src="./screen_shots/2022-12-25 18-29-10-62.png" alt="56">
+    <img src="./screen_shots/2022-12-25 18-29-28-14.png" alt="57">
+
+    </div>
+
+    <p>
+        Our drag'n'drop and clipboard sharing works as expected:
+    </p>
+
+    <div class="tiles">
+
+    <img src="./screen_shots/2022-12-25 18-29-37-30.png" alt="58">
+    <img src="./screen_shots/39.png" alt="59"></div>
+ <p>
+            You can switch your virtual Ubuntu to full-screen mode with pressing down 'rCTRL + F' (right-CTL button is commonly used in Virtual Box and calling HOST instead of 'WIN' or 'CmD') (with system focused on VM window)
+         </p>
+
+    <p>Full-screen mode switching works too:</p>
+
+    <img src="./screen_shots/40.png" alt="60">
+
+    <div class="tiles">
+    <img src="./screen_shots/photo_2022-12-25_18-40-36.jpg" alt="61">
+    <img src="./screen_shots/photo_2022-12-25_18-41-08.jpg" alt="62">
+
+</div>
+    
+         <p>
+            P.S. very last screenshots were taken in fullscreen mode, and usability of Shared-Folder is proved now as well.
+         </p>
+
+         <div class="line"></div>
+
+         <h2>HAPPY USING VIRTUAL-BOX!!!</h2>
+
+         <h3>WITH BEST REGARDS!</h3>
+
+         <h4>Vadym <i>@vadym4che</i> Chervoniak</h4>
+         <h4>&copy; 2022</h4>
+
+</article>
+</body>
+</html>
